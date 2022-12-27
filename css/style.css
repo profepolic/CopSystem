@@ -1,0 +1,283 @@
+.body-principal{
+    background-image: url(../src/images/home/background-home.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.row {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 1.5px;
+    margin-left: 1.5px;
+}
+
+.texto{
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+}
+
+.divisor {
+    display: table;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 50px;
+    height: 150px;
+}
+
+.anuncios {
+    display: table;
+    background: #f1f1f1;
+    text-align: center;
+    color: #000;
+    margin-bottom: 50px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0.3;
+    margin-top: 10px;
+}
+
+.menu-flot {
+    padding: 33px;
+    position: fixed;
+    top: 76%;
+    margin-left: 88%;
+    width: 13%;
+    z-index: 2;
+}
+
+a.menu-float.link {
+    float: right;
+    background: linear-gradient(45deg, crimson, black);
+    padding: 7px;
+    border-radius: 34px;
+    box-shadow: 0 0 11px black;
+    width: 60px;
+    color: #fff;
+    text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu-btn {
+    z-index: 1;
+}
+
+nav{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 100px;
+    z-index: 1;
+}
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li{
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 7px 15px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    margin-bottom: 100px;
+}
+
+nav .menu-btn i{
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 1240px) {
+    nav .menu-btn i{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        top: 0px;
+        left: -100%;
+        background-color: #003840;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    nav ul.open{
+        left: 0;
+    }
+    nav ul li{
+        width: 100%;
+        margin: 50px 0;
+    }
+    nav ul li a {
+        font-size: 23px;
+    }
+    nav ul li a.active,
+    nav ul li a:hover{
+        background: none;
+        color: #f88f06;
+    }   
+
+    .destino{
+        display: none;
+    }
+}
+
+.img-home{
+    width: 70px;
+}
+
+.img-home-emblema{
+    width: 180px;
+}
+
+button.button-home {
+    border-radius: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: deeppink;
+    padding: 28px;
+    padding-top: 0;
+    padding-bottom: 0px;
+    background: linear-gradient(175deg, deeppink, hotpink);
+    color: #fff;
+    height: 50px;
+    outline: none;
+}
+
+.btn-label {
+    background: linear-gradient(40deg, #fff, #d3d3d3);
+    padding: 22px;
+    border-radius: 55%;
+    position: relative;
+    left: -33px;
+}
+
+i.fas.fa-home {
+    color: mediumvioletred;
+    font-size: 15px;
+}
+
+button.button-activate {
+    border-radius: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: blueviolet;
+    padding: 28px;
+    padding-top: 0;
+    padding-bottom: 0px;
+    background: linear-gradient(175deg, blueviolet, violet);
+    color: #fff;
+    height: 50px;
+    outline: none;
+}
+
+i.fas.fa-power-off {
+    color: darkviolet;
+    font-size: 15px;
+}
+
+button.button-support {
+    border-radius: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: deepskyblue;
+    padding: 28px;
+    padding-top: 0;
+    padding-bottom: 0px;
+    background: linear-gradient(175deg, deepskyblue, powderblue);
+    color: #fff;
+    height: 50px;
+    outline: none;
+}
+
+i.fas.fa-power-off {
+    color: darkviolet;
+    font-size: 15px;
+}
+
+button.button-sign {
+    border-radius: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: darkviolet;
+    padding: 28px;
+    padding-top: 0;
+    padding-bottom: 0px;
+    background: linear-gradient(154deg, dodgerblue, deeppink, darkviolet);
+    color: #fff;
+    height: 50px;
+    outline: none;
+}
+i.fas.fa-comment {
+    color: cornflowerblue;
+}
+
+i.fas.fa-cart-plus {
+    position: relative;
+    top: .5rem;
+}
+
+.margin-home{
+    margin-bottom: 18em;
+}
+
+.destino{
+    margin-top: -6em;
+}
+
+.destino a{
+    color: white;
+    margin-right: 2em;
+}
+
+.lateral {
+    background: #f1f1f1;
+    border-radius: 1rem;
+    display: table;
+    height: 10rem;
+    padding: 12px;
+    position: fixed;
+    width: 1rem;
+    left: 1rem;
+    top: 15rem;
+}
+.linklateral {
+    color: #000;
+    font-size: 25px;
+    position: relative;
+    top: 26px;
+    cursor: pointer;
+}
+
+.cargo{
+    color: #fff;
+    margin: auto;
+    padding: 10rem;
+}
+
+label{
+    color: white;
+}
