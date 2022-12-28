@@ -16,13 +16,13 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Dumping data for table `cargos`
+-- Dumping data for table `users`
 --
 
-LOCK TABLES `cargos` WRITE;
-/*!40000 ALTER TABLE `cargos` DISABLE KEYS */;
-INSERT INTO `cargos` VALUES (1,1,'Sócio',0,0,0,0,0,'1'),(2,2,'Agente',0,0,0,0,0,'2');
-/*!40000 ALTER TABLE `cargos` ENABLE KEYS */;
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (4,'oskino','$2y$10$DkLfg8f5WoaNNAcXCxKj4ua8ERZpjulTflN3OEGjOYWIOfPFxZCJi','sk4in8@gmail.com','1',0);
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -34,4 +34,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-28  6:01:05
+-- Dump completed on 2022-12-28  5:59:08
