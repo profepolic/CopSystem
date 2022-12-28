@@ -6,8 +6,22 @@
                 <div class="row">
                 <div class="col-md-12 col-12 col-lg-12 ">
                     <label for="nick"> Nick </label>
-                    <input type="text" id="nick" class="form-control" name="nick">
+                    <input type="text" id="nick" placeholder="Cop-exemplo" class="form-control" name="nick">
                     <span id="erro_nick" class="erro"></span>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12 col-12 col-lg-12 ">
+                    <label for="email" class="mt-4 mb-2"> Email </label>
+                    <input type="email" id="email" placeholder="www@exemplo.com" class="form-control" name="email">
+                    <span id="erro_email" class="erro"></span>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12 col-12 col-lg-12">
+                    <label for="validacao" class="mt-4 mb-2"> Código de validação </label>
+                    <input type="text" id="validacao" class="form-control" name="validacao">
+                    <span id="erro_validacao" class="erro"></span>
                 </div>
                 </div>
                 <div class="row">
@@ -18,7 +32,7 @@
                         <input type="password" id="senha" class='form-control passwordInput ms-lg-5' name="senha">
                         <div class="input-group-prepend">
                         <span class="input-group-text">
-                        <img src="src/img/olho_cortado.png" id="olho_senha" class="img-responsive" style="width: 25px;">
+                        <img src="src/img/olho_cortado.png" id="olho_senha" class="img-responsive" style="width: 24px;">
                         </span>
                         </div>
                         </div>
@@ -34,7 +48,7 @@
                         <input type="password" id="confirmar_senha" class='form-control ms-lg-5' name="confirmar_senha">
                         <div class="input-group-prepend">
                         <span class="input-group-text">
-                        <img src="src/img/olho_cortado.png" id="olho_confirmar_senha" class="img-responsive" style="width: 25px;">
+                        <img src="src/img/olho_cortado.png" id="olho_confirmar_senha" class="img-responsive" style="width: 24px;">
                         </span>
                         </div>
                         </div>
@@ -45,35 +59,54 @@
                     <div class="row text-center justify-content-center">
                     <div id="mensagem" class="col-9">
                     <div class="row">
+                    <div class="col-md-12 col-12 text-center">
                     <label><b>A senha deve conter o seguinte:</b></label>
                     </div>
+                    </div>
                     <div class="row mt-3">
-                    <img id="img_minuscula" src="src/img/uncheck.png" style="width: 40px; height: 15px" class="col-2 mt-2" /><label id="minuscula" class="invalid col-9">Uma letra <b>minúscula</b></label>
+                    <div class="col-md-12 col-12 text-center">
+                    <img id="img_minuscula" src="src/img/uncheck.png" style="width: 1.7em" class="col-2 mt-2" /><label id="minuscula" class="invalid col-9">Uma letra <b>minúscula</b></label>
+                    </div>
                     </div>
                     <div class="row mt-2">
-                    <img id="img_maiuscula" src="src/img/uncheck.png" style="width: 40px; height: 15px" class="col-2 mt-2" /><label id="maiuscula" class="invalid col-9">Uma letra <b>maiúscula</b></label>
+                    <div class="col-md-12 col-12 text-center">
+                    <img id="img_maiuscula" src="src/img/uncheck.png" style="width: 1.7em" class="col-2 mt-2" /><label id="maiuscula" class="invalid col-9">Uma letra <b>maiúscula</b></label>
+                    </div>
                     </div>
                     <div class="row mt-2">
-                    <img id="img_numero" src="src/img/uncheck.png" style="width: 40px; height: 15px" class="col-2 mt-2" /><label id="numero" class="invalid col-9">Um <b>número</b></label>
+                    <div class="col-md-12 col-12 text-center">
+                    <img id="img_numero" src="src/img/uncheck.png" style="width: 1.7em" class="col-2 mt-2" /><label id="numero" class="invalid col-9">Um <b>número</b></label>
+                    </div>
                     </div>
                     <div class="row mt-2">
-                    <img id="img_especial" src="src/img/uncheck.png" style="width: 40px; height: 15px" class="col-2 mt-2" /><label id="especial" class="invalid col-9">Um <b>caractere especial</b></label>
+                    <div class="col-md-12 col-12 text-center">
+                    <img id="img_especial" src="src/img/uncheck.png" style="width: 1.7em" class="col-2 mt-2" /><label id="especial" class="invalid col-9">Um <b>caractere especial</b></label>
+                    </div>
                     </div>
                     <div class="row mt-2">
-                    <img id="img_tamanho" src="src/img/uncheck.png" style="width: 40px; height: 15px" class="col-2 mt-2" /><label id="tamanho" class="invalid col-9">No mínimo <b>8 caracteres</b></label>
+                    <div class="col-md-12 col-12 text-center">
+                    <img id="img_tamanho" src="src/img/uncheck.png" style="width: 1.7em" class="col-2 mt-2" /><label id="tamanho" class="invalid col-9">No mínimo <b>8 caracteres</b></label>
+                    </div>
                     </div>
                     <div class="row mt-2">
-                    <img id="img_coincidem" src="src/img/uncheck.png" style="width: 40px; height: 15px" class="col-2 mt-2" /><label id="coincidem" class="invalid col-9">Senhas <b>coincidem</b></label>
+                    <div class="col-md-12 col-12 text-center">
+                    <img id="img_coincidem" src="src/img/uncheck.png" style="width: 1.7em" class="col-2 mt-2" /><label id="coincidem" class="invalid col-9">Senhas <b>coincidem</b></label>
                     </div>
                     </div>
                     </div>
-                    <div class="form-group ">
+                    </div>
+                    <div class="row mt-2 mb-5">
+                    <div class="col-md-12 col-12 text-center mb-5">
+                    <div class="form-group">
 
-                        <button type="submit" class="mt-5 botao"> Trocar </button>
+                        <button type="submit" class="mt-5 btn-lg btn-primary"> Criar </button>
 
+                    </div>
+                    </div>
                     </div>
                 </div>
                 </form>
         </div>
     </div>
 </div>
+<script src="js/verificar_senha.js"></script>
