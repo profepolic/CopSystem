@@ -1,6 +1,6 @@
 <?php
-
 include("include/url_amigavel.php");
+include("global.php");
 
 $paginas = ['home', 'ativar', 'suporte', 'cargo'];
 
