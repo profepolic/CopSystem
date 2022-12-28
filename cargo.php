@@ -1,3 +1,8 @@
+<?php
+$select_cargos = "SELECT * FROM cargos WHERE valor > 0";
+$select_cargos_query = $conn->query($select_cargos);
+?>
+
 <div class="col-lg-12">
     <div class="col-md-8 cargo">
         <form action="#" type="post">
@@ -13,11 +18,11 @@
             <label for="exampleFormControlSelect1">Selecione o cargo desejado!!!</label>
             <select class="form-control" id="exampleFormControlSelect1">
                 <option selected disabled></option>
-              <option>Sócio  10$</option>
-              <option>Agente 20$</option>
-              <option>teste3 30$</option>
-              <option>teste4 40$</option>
-              <option>teste5 50$</option>
+              <?php
+              while($roow = mysqli_fetch_assoc($select_cargos_query)){ extract($roow);
+                echo '<option>'.$nome,   " R$",number_format($valor, 2, ",", ".").'</option>';
+              }
+              ?>
             </select>
           </div>
           <div class="form-group">
