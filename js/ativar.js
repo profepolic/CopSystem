@@ -50,7 +50,7 @@ $(document).ready(function(){
                         $(this).css('width', '100%')
                     });
                     setTimeout(() =>{
-                        window.location.href='./';
+                        window.location.href='login';
                     }, 1000);
                     $('#criar').remove();
                 }
@@ -70,7 +70,7 @@ $(document).ready(function(){
                         $(this).css('width', '100%')
                     });
                     setTimeout(() =>{
-                        window.location.href='./';
+                        window.location.href='login';
                     }, 1000);
                     $('#criar').remove();
                 }

@@ -2,7 +2,7 @@
 include("include/url_amigavel.php");
 include("global.php");
 
-$paginas = ['home', 'ativar', 'suporte', 'cargo'];
+$paginas = ['home', 'criar', 'suporte', 'cargo'];
 
 $pagina = filter_input(INPUT_GET, 'pagina', FILTER_DEFAULT);
 
