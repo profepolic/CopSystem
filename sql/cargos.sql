@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 28-Dez-2022 às 06:10
+-- Tempo de geração: 28-Dez-2022 às 07:06
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.2
 
@@ -24,31 +24,37 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `suporte`
+-- Estrutura da tabela `cargos`
 --
 
-CREATE TABLE `suporte` (
+CREATE TABLE `cargos` (
   `id` int(11) NOT NULL,
-  `cliente` varchar(255) DEFAULT NULL,
-  `atendente` varchar(255) DEFAULT NULL,
-  `status` int(11) NOT NULL DEFAULT 0
+  `id_cargo` int(11) DEFAULT NULL,
+  `nome` varchar(255) DEFAULT NULL,
+  `permicao_promover` int(11) DEFAULT NULL,
+  `permicao_demitir` int(11) DEFAULT NULL,
+  `permicao_advertir` int(11) DEFAULT NULL,
+  `permicao_rebaixar` int(11) DEFAULT NULL,
+  `permicao_banir` int(11) DEFAULT NULL,
+  `valor` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `suporte`
+-- Extraindo dados da tabela `cargos`
 --
 
-INSERT INTO `suporte` (`id`, `cliente`, `atendente`, `status`) VALUES
-(1, 'z10', NULL, 0);
+INSERT INTO `cargos` (`id`, `id_cargo`, `nome`, `permicao_promover`, `permicao_demitir`, `permicao_advertir`, `permicao_rebaixar`, `permicao_banir`, `valor`) VALUES
+(1, 1, 'Sócio', 0, 0, 0, 0, 0, '1'),
+(2, 2, 'Agente', 0, 0, 0, 0, 0, '2');
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `suporte`
+-- Índices para tabela `cargos`
 --
-ALTER TABLE `suporte`
+ALTER TABLE `cargos`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -56,10 +62,10 @@ ALTER TABLE `suporte`
 --
 
 --
--- AUTO_INCREMENT de tabela `suporte`
+-- AUTO_INCREMENT de tabela `cargos`
 --
-ALTER TABLE `suporte`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `cargos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
