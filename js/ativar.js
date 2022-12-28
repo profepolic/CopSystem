@@ -10,6 +10,7 @@ $(document).ready(function(){
         $.ajax({
             url: 'kernel/ativar.php',
             method: 'POST',
+            dataType: 'json',
             cache: false,
             contentType: false,
             processData: false,
@@ -26,6 +27,11 @@ $(document).ready(function(){
                     $('#'+erros[i].replace('erro_', '')).addClass('form-control');
                     $('#'+erros[i]).html('');
                 })
+
+                $('html,body').animate({
+                    scrollTop: $("#nick").offset().top-100
+                }, 200);
+
                 }
                 }
                 if(resultado.status){

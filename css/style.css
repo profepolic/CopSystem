@@ -297,3 +297,17 @@ background: #007d00;
 border-radius: 3px;
 transition: width 1s ease-in-out;
 }
+
+input.invalido {
+    border: 1px solid red;
+}
+
+.invalido {
+    border: 1px solid red !important;
+}
+
+.erro {
+    display: block;
+    margin-top: 2px;
+    color: red;
+}
