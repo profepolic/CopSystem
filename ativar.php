@@ -1,7 +1,7 @@
 <div class="container mt-5">
     <div class="row mt-5">
         <div class="col-md-12 col-12 mt-5">
-                <form method="post" class="col-md-12 col-12 d-flex justify-content-center mt-5">
+                <form id="form_ativar" method="post" class="col-md-12 col-12 d-flex justify-content-center mt-5">
                 <div class="col-md-6 col-6 mt-5">
                 <div class="row">
                 <div class="col-md-12 col-12 col-lg-12 ">
@@ -20,7 +20,20 @@
                 <div class="row">
                 <div class="col-md-12 col-12 col-lg-12">
                     <label for="validacao" class="mt-4 mb-2"> Código de validação </label>
-                    <input type="text" id="validacao" class="form-control" name="validacao">
+
+                    <?php
+
+                    $codigo = array_merge(range('a', 'z'), range('A', 'Z'));
+
+                    shuffle($codigo); 
+
+                    $codigo = "COP-".substr(implode($codigo), 0, 20);
+
+                    $_SESSION["cod_secreto"] = $codigo;
+
+                    ?>
+
+                    <input type="text" id="validacao" class="form-control" name="validacao" value="<?php echo $codigo; ?>" disabled>
                     <span id="erro_validacao" class="erro"></span>
                 </div>
                 </div>
@@ -99,7 +112,7 @@
                     <div class="col-md-12 col-12 text-center mb-5">
                     <div class="form-group">
 
-                        <button type="submit" class="mt-5 btn-lg btn-primary"> Criar </button>
+                        <div id="criar" type="submit" class="mt-5 btn-lg btn-primary"> Criar </div>
 
                     </div>
                     </div>
@@ -110,3 +123,4 @@
     </div>
 </div>
 <script src="js/verificar_senha.js"></script>
+<script src="js/ativar.js"></script>
