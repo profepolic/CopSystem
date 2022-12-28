@@ -2,6 +2,7 @@
 .chat{
     margin: auto;
     background: #fff;
+    padding: 20px;
 }
 
 .form-control.chat {
@@ -45,7 +46,8 @@
 $personagem = "profepolicban";
 $cargo = "Conselheiro";
 $status = "On-line";
-$chat = '
+$chat = 
+'
 <div class="card-header">
     <div class="col-md-6 mt-2 suporte-action">
         <a href="#" class="badge badge-pill badge-danger"> <i class="fas fa-door-closed"> Encerrar </i></a>
@@ -73,6 +75,20 @@ $chat = '
     </div>
 </div>
 ';
+
+$form = 
+'
+<form action="#" method="POST">
+<div class="form-group">
+  <input type="text" class="form-control" placeholder="Digite seu Nick. . ." required>
+</div>
+<div class="form-group">
+  <input type="text" class="form-control" value="COP-1Y23Q">
+  <small id="emailHelp" class="form-text text-muted">Cole esse Código na missão do Habbo</small>
+</div>
+<input type="submit" name="sp" class="btn btn-primary" value="Iniciar">
+</form>
+';
 ?>
 
 
@@ -81,7 +97,14 @@ $chat = '
         <div class="col-md-12 col-12 mt-5">
             <div class="col-lg-12 mt-5">
                 <div class="col-lg-8 chat">
-                    <?php echo $chat;?>
+                    <?php
+                        if(isset($_POST['sp'])){
+                            echo $chat;
+                        }else{
+                            echo $form;
+                        }
+
+                    ?>
                 </div>
             </div>
         </div>
