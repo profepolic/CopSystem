@@ -1,10 +1,14 @@
 <?php
 session_start();
+
+
+// session_destroy();
+// $_SESSION['usuario'] = "profepolicban";
 ?>
 <style>
 .chat{
     margin: auto;
-    background: #fff;
+    background: linear-gradient(45deg, black, transparent);
     padding: 20px;
 }
 
@@ -43,6 +47,11 @@ session_start();
     float: right;
     text-align: right;
 }
+.atent {
+    text-align: center;
+    background: linear-gradient(45deg, black, transparent);
+    padding: 10px;
+}
 </style>
 
 <?php
@@ -77,6 +86,11 @@ $chat = '
     </div>
 </div>
 ';
+
+$atendentes = 
+'
+
+';
 ?>
 
 
@@ -87,10 +101,30 @@ $chat = '
                 <div class="col-lg-8 chat">
                     <?php
                     if(!isset($_SESSION['usuario'])) {?>
-                        <center>
-                            <h6>Faça login para poder Útilizar o Suporte</h6>
+                        <!-- <center>
+                            <h6>Faça login para poder utilizar o Suporte</h6>
                             <a href="login"><button class="btn btn-danger">Fazer login</button></a>
-                        </center>
+                        </center> -->
+<div class="card-header">
+    <div class="row">
+        <div class="mt-1">
+            <span class="badge badge-secondary">COP Live Chat</span>
+        </div>
+    </div>
+</div>
+<div class="card-body">
+    <div class="col-lg-12 mt-2 atent">
+        <div style="margin: auto; height: 60px; width: 65px;  background: url(https://www.habbo.com.br/habbo-imaging/avatarimage?&user=profepolicban&action=&direction=4&head_direction=3&img_format=png&gesture=&headonly=0&size=2),  radial-gradient(circle, #fff, #f1f1f1); background-position: center top -10px; border-radius: 60px; "></div>
+        <span class="badge badge-secondary">Conselheiro  Profepolicban</span>
+        <h6 class="badge badge-pill badge-success">On-line</h6><br>
+        <button class="btn btn-danger">Suporte</button>     
+    </div>
+</div>
+<div class="card-footer fot">
+    <div class="form-group">
+      <center><span class="badge badge-secondary">Version 0.0.2</span></center>
+    </div>
+</div>
                     <?php }else{
                         echo $chat;
                     }
