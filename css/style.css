@@ -288,3 +288,11 @@ label{
 .valid {
     color: green;
   }
+
+.progress-bar-fill {
+display: block;
+height: 5px;
+background: #007d00;
+border-radius: 3px;
+transition: width 1s ease-in-out;
+}
