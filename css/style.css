@@ -153,6 +153,18 @@ nav .menu-btn i{
     width: 180px;
 }
 
+@media (max-width: 540px) {
+
+    .img-home-emblema{
+        width: 80px;
+    }
+
+    .img-home{
+        width: 50px;
+    }
+
+}
+
 button.button-home {
     border-radius: 20px;
     border-width: 2px;
@@ -263,6 +275,7 @@ i.fas.fa-cart-plus {
     width: 1rem;
     left: 1rem;
     top: 15rem;
+    z-index: 99;
 }
 .linklateral {
     color: #000;
@@ -294,6 +307,14 @@ label{
 display: block;
 height: 5px;
 background: #007d00;
+border-radius: 3px;
+transition: width 1s ease-in-out;
+}
+
+.progress-bar-fill-erro {
+display: block;
+height: 5px;
+background: #a30000;
 border-radius: 3px;
 transition: width 1s ease-in-out;
 }

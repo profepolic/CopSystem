@@ -1,5 +1,6 @@
 let erros = ['erro_nick', 'erro_email', 'erro_validacao', 'erro_senha', 'erro_confirmar_senha'];
 $(document).ready(function(){
+    let url = $('#validacao').val();
     $("#criar").click(function(){
         event.preventDefault();
         setTimeout(() =>{
@@ -8,7 +9,7 @@ $(document).ready(function(){
         $('#criar').append('<img src="src/img/loading.gif" style="width: 30px;"/>');
         var dados = new FormData(document.getElementById("form_ativar"));
         $.ajax({
-            url: 'kernel/ativar.php',
+            url: 'kernel/ativar.php?validacao='+url,
             method: 'POST',
             dataType: 'json',
             cache: false,
@@ -49,7 +50,27 @@ $(document).ready(function(){
                         $(this).css('width', '100%')
                     });
                     setTimeout(() =>{
-                        ;
+                        window.location.href='./';
+                    }, 1000);
+                    $('#criar').remove();
+                }
+
+                if(resultado.erro){
+                    let status = document.createElement('div');
+                    status.setAttribute("id", 'status');
+                    document.body.appendChild(status);
+                    $('#status').css({'position': 'fixed', 'top':'0', 'width':'100%', 'z-index':'100', 'text-align': 'center', 'color':'white', 'padding':'10px 10px 10px 10px', 
+                    'font-size': '17px', 'background':'#cc0000'});
+                    let progresso = document.createElement('span');
+                    progresso.classList.add('progress-bar-fill-erro');
+                    progresso.style.cssText = 'width: 0%;';
+                    $('#status').html(resultado.erro);
+                    document.getElementById('status').appendChild(progresso);
+                    $('.progress-bar-fill').delay(50).queue(function () {
+                        $(this).css('width', '100%')
+                    });
+                    setTimeout(() =>{
+                        window.location.href='./';
                     }, 1000);
                     $('#criar').remove();
                 }

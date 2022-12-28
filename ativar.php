@@ -27,13 +27,11 @@
 
                     shuffle($codigo); 
 
-                    $codigo = "COP-".substr(implode($codigo), 0, 20);
-
-                    $_SESSION["cod_secreto"] = $codigo;
-
+                    $cod_secreto = "COP-".substr(implode($codigo), 0, 20);
+                    
                     ?>
 
-                    <input type="text" id="validacao" class="form-control" name="validacao" value="<?php echo $codigo; ?>" disabled>
+                    <input type="text" id="validacao" class="form-control" name="validacao" value="<?php echo $cod_secreto; ?>" disabled>
                     <span id="erro_validacao" class="erro"></span>
                 </div>
                 </div>

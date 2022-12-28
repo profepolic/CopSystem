@@ -1,5 +1,5 @@
 <div class="nav-conteiner px-5">
-    <nav>
+    <nav class="col-12">
         <div>
              <img id="sino" src="src/images/home/sino.png" alt="Sem-conexion" class="img-home" style="cursor: pointer">
         </div>
