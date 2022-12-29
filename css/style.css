@@ -23,6 +23,7 @@
     color: #fff;
     margin-bottom: 50px;
     height: 150px;
+    opacity: 0;
 }
 
 .anuncios {
@@ -344,4 +345,11 @@ input.invalido {
     display: block;
     margin-top: 2px;
     color: red;
+}
+
+.img-user{
+    width: 60px;
+    height: 70px;
+    border-radius:100%;
+    overflow:hidden;
 }

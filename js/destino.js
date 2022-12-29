@@ -7,6 +7,20 @@ $("#destino_"+destino).click(function() {
         scrollTop: $("#"+destino).offset().top-250
     }, 200);
 });
+
+$(window).scroll(function() {
+    let hTd = $('#'+destino).offset().top,
+    hHd = $('#'+destino).outerHeight(),
+    wHd = $(window).height(),
+    wSd = $(this).scrollTop(),
+    alterado = 0;
+
+    if (wSd > hTd+hHd-wHd+250 && alterado != 1){
+        $('#'+destino).animate({ 
+            opacity: "+=1",
+          }, 800 );
+    }
+})
 }
 }
 
