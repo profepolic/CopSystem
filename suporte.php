@@ -76,32 +76,42 @@ $cargo = "Conselheiro";
                     if(!isset($_SESSION['usuario'])) {?>
                         <center>
                             <h6>Faça login para poder utilizar o Suporte</h6>
-                            <a href="login"><button class="btn btn-danger">Fazer login</button></a>
+                            <a href="login"><button class="btn btn-danger">Login</button></a>
                         </center>
-                    <?php }else{ ?>
+                    <?php }else if($status == 0){?>
+                        <center>
+                            <h6>Atualmente Estamos com (0) Atendentes On-line no momento</h6>
+                            <a href="#"><button class="btn btn-info">Iniciar Chat</button></a>
+                        </center>
+                   <?php }else if($status == 1){?>
+                    <div class="card-header">
+                            <div class="col-md-6 mt-2 suporte-action">
+                                <a href="#" class="badge badge-pill badge-danger"> <i class="fas fa-door-closed"> Encerrar </i></a>
+                            </div>
+                            <div class="row">
+                                <div class="mt-1">
+                                    <span class="badge badge-secondary">COP Live Chat</span>
+                                    <span class="badge badge-secondary">Aguardando . . .</span>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <center><h6>Aguardando atendente, sua posição na fila é (0)</h6></center>
+                        </div>
+                        <div class="card-footer fot">
+                        </div>
+                 <?php } else if($status == 2) { ?>
                         <div class="card-header">
                             <div class="col-md-6 mt-2 suporte-action">
                                 <a href="#" class="badge badge-pill badge-danger"> <i class="fas fa-door-closed"> Encerrar </i></a>
                             </div>
                             <div class="row">
-                                <?php
-                                 if(!$atendente == NULL){
-                                    echo '<div style="margin-right: 10px; height: 60px; width: 65px;  background: url(https://www.habbo.com.br/habbo-imaging/avatarimage?&user='.$atendente.'&action=&direction=4&head_direction=3&img_format=png&gesture=&headonly=0&size=2),  radial-gradient(circle, #fff, #f1f1f1); background-position: center top -10px; border-radius: 60px; "></div>';
-                                 }
-                                ?>
+                                <div style="margin-right: 10px; height: 60px; width: 65px;  background: url(https://www.habbo.com.br/habbo-imaging/avatarimage?&user=<?php echo $atendente ;?>&action=&direction=4&head_direction=3&img_format=png&gesture=&headonly=0&size=2),  radial-gradient(circle, #fff, #f1f1f1); background-position: center top -10px; border-radius: 60px; "></div>
                                 <div class="mt-1">
-                                    <span class="badge badge-secondary">COP Live Chat</span>
-                                     <?php
-                                     if($atendente == NULL){
-                                        echo '<span class="badge badge-secondary">Aguardando. . .</span>';
-                                     }else{
-                                        echo '
-                                        <span class="badge badge-secondary">'.$cargo.'  '.$atendente.'</span>
-                                        <br>
-                                         <h6 class="badge badge-pill badge-success">On-line</h6>
-                                        ';
-                                     }
-                                     ?>
+                                    <span class="badge badge-secondary"><?php echo $cargo , " " ,  $atendente ;?></span>
+                                    <br>
+                                    <h6 class="badge badge-pill badge-success">On-line</h6>
                                 </div>
                             </div>
                         </div>

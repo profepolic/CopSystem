@@ -28,10 +28,13 @@ if(!isset($pagina)){
   }
 ?>
 
-<div class="menu-flot">
-  <a class="menu-float link" href="index_cargo"><i class="fas fa-cart-plus"><p class="menu-float nome">Shop</p></i></a>
-</div>
-<?php /* <Footer> */ include("include/footer2.php"); /*<End - Footer> */ ?>
+
+<?php 
+/* <botaosuporte> */ include("include/botaosuporte.php"); /*<End - botaosuporte> */ 
+
+/* <Footer> */ include("include/footer2.php"); /*<End - Footer> */ 
+
+?>
 
 <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">

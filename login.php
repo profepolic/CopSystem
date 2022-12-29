@@ -51,6 +51,9 @@ $pagina = filter_input(INPUT_GET, 'pagina', FILTER_DEFAULT);
     font-family: auto;
 }
     </style>
+    <?php
+    /* <botaosuporte> */ include("include/botaosuporte.php"); /*<End - botaosuporte> */ 
+    ?>
 <div class="nav-conteiner px-5">
     <nav>
         <div>
@@ -61,7 +64,7 @@ $pagina = filter_input(INPUT_GET, 'pagina', FILTER_DEFAULT);
         </div>
         <ul>
             <li>  <a href="index_home"><button class="button-home"><span class="btn-label"><i class="fas fa-home"></i></span>Inicio</button></a> </li>
-            <li>  <a href="index_suporte"><button class="button-support"><span class="btn-label"><i class="fas fa-comment"></i></span>Suporte</button></a> </li>
+            <li>  <a href="index_cargo"><button class="button-support"><span class="btn-label"><i class="fas fa-cart-plus"></i></span>Shop</button></a> </li>
         </ul>
     </nav>
 </div>

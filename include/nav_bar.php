@@ -12,7 +12,7 @@
         <ul>
             <li>  <a href="index_home"><button class="button-home"><span class="btn-label"><i class="fas fa-home"></i></span>Inicio</button></a> </li>
             <li>  <a href="index_criar"><button class="button-activate"><span class="btn-label"><i class="fas fa-power-off"></i></span>Criar</button></a> </li>
-            <li>  <a href="index_suporte"><button class="button-support"><span class="btn-label"><i class="fas fa-comment"></i></span>Suporte</button></a> </li>
+            <li>  <a href="index_cargo"><button class="button-support"><span class="btn-label"><i class="fas fa-cart-plus"></i></span>Shop</button></a> </li>
             <li>  <a href="login"><button class="button-sign">Entrar</button></a> </li>
         </ul>
     </nav>
