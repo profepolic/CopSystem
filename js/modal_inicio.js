@@ -75,6 +75,9 @@ $("#user").on('click', ()=>{
     })
 
     $("#botao_pesquisar").on('click', ()=>{
+        $('#botao_pesquisar').prop('disabled', true);
+        $('#botao_pesquisar').html('');
+        $('#botao_pesquisar').append('<img src="src/img/loading.gif" style="width: 24.5px;"/>');
         $.ajax({
             url: 'include/buscar_user.php?nick='+$("#pesquisa").val(),
             method: 'GET',
@@ -83,6 +86,10 @@ $("#user").on('click', ()=>{
             processData: false,
             success: function(resultado){
                 $("#resultado").html(resultado);
+
+                $('#botao_pesquisar img:last-child').remove();
+                $('#botao_pesquisar').append('<img src="src/img/lupa.png" style="width: 24.5px;"/>');
+                $('#botao_pesquisar').prop('disabled', false);
             }
         })
     })

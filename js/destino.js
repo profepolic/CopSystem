@@ -15,10 +15,10 @@ $(window).scroll(function() {
     wSd = $(this).scrollTop(),
     alterado = 0;
 
-    if (wSd > hTd+hHd-wHd+250 && alterado != 1){
+    if (wSd > hTd+hHd-wHd+80 && alterado != 1){
         $('#'+destino).animate({ 
             opacity: "+=1",
-          }, 800 );
+          }, 300 );
     }
 })
 }

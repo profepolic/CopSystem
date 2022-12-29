@@ -119,6 +119,23 @@ nav .menu-btn i{
     display: none;
 }
 @media (max-width: 1240px) {
+
+    nav ul li{
+        width: 11em;
+        transition: all 0.3s ease;
+    }
+}
+
+.img-home{
+    width: 70px;
+}
+
+.img-home-emblema{
+    width: 180px;
+}
+
+@media (max-width: 1122px) {
+
     nav .menu-btn i{
         display: block;
     }
@@ -147,19 +164,11 @@ nav .menu-btn i{
     nav ul li a:hover{
         background: none;
         color: #f88f06;
-    }   
+    }
 
     .destino{
         display: none;
     }
-}
-
-.img-home{
-    width: 70px;
-}
-
-.img-home-emblema{
-    width: 180px;
 }
 
 @media (max-width: 540px) {
@@ -349,13 +358,6 @@ input.invalido {
     display: block;
     margin-top: 2px;
     color: red;
-}
-
-.img-user{
-    width: 60px;
-    height: 70px;
-    border-radius:100%;
-    overflow:hidden;
 }
 
 .fundo-modal{

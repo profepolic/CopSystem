@@ -30,7 +30,7 @@
 ?>
 
 <div class="row col-4 col-lg-4 dpi">
-<div style="margin-right: 10px; height: 60px; width: 65px;  background: url(https://www.habbo.com.br/habbo-imaging/avatarimage?&user=<?php echo $user['nome'] ;?>&action=&direction=4&head_direction=3&img_format=png&gesture=&headonly=0&size=2),  radial-gradient(circle, #fff, #f1f1f1); background-position: center top -10px; border-radius: 60px; "></div>
+<div style="margin-right: 10px; height: 50px; width: 55px;  background: url(https://www.habbo.com.br/habbo-imaging/avatarimage?&user=<?php echo $user['nome'] ;?>&action=&direction=4&head_direction=3&img_format=png&gesture=&headonly=0&size=2),  radial-gradient(circle, #fff, #f1f1f1); background-position: center top -20px; border-radius: 60px; "></div>
 <div class="col-2 col-lg-2 mt-1">
 <?php
 
