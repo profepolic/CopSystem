@@ -357,3 +357,8 @@ input.invalido {
     border-radius:100%;
     overflow:hidden;
 }
+
+.fundo-modal{
+    background: linear-gradient(45deg, black, transparent);
+    color: white;
+}

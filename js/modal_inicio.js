@@ -65,6 +65,7 @@ $("#user").on('click', ()=>{
             $("#body_modal").html(resultado);
             $("#modal").modal({backdrop:'static', keyboard:false});
     $("#modal").modal('show');
+    $(".modal-content").addClass('fundo-modal');
     $("#fechar").on('click', ()=>{
         Promise.all([$("#modal").modal('hide')]).then(function() {
             $(".modal-backdrop").remove();
