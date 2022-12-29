@@ -360,5 +360,5 @@ input.invalido {
 
 .fundo-modal{
     background: linear-gradient(45deg, black, transparent);
-    color: white;
+    color: white !important;
 }

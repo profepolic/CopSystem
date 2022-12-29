@@ -5,7 +5,7 @@ $("#sino").on('click', ()=>{
                '<div class="modal-header">' +
                '<h5 id="titulo_modal" class="modal-title"></h5>' +
                '<button id="fechar" type="button" class="close" aria-label="Fechar">' +
-               '<span aria-hidden="true">&times;</span>' +
+               '<span aria-hidden="true" style="color:white">&times;</span>' +
                '</button>' +
                '</div>' +
                '<div id="body_modal" class="modal-body">' +
@@ -27,6 +27,7 @@ $("#sino").on('click', ()=>{
     })
     $("#modal").modal({backdrop:'static', keyboard:false});
     $("#modal").modal('show');
+    $(".modal-content").addClass('fundo-modal');
     $("#fechar").on('click', ()=>{
         Promise.all([$("#modal").modal('hide')]).then(function() {
             $(".modal-backdrop").remove();
@@ -45,7 +46,7 @@ $("#user").on('click', ()=>{
                '<div class="modal-header">' +
                '<h5 id="titulo_modal" class="modal-title"></h5>' +
                '<button id="fechar" type="button" class="close" aria-label="Fechar">' +
-               '<span aria-hidden="true">&times;</span>' +
+               '<span aria-hidden="true" style="color:white">&times;</span>' +
                '</button>' +
                '</div>' +
                '<div id="body_modal" class="modal-body">' +
