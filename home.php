@@ -1,16 +1,13 @@
 <div class="container p-lg-5">
     <div class="row mt-5">
 
-    <div class="col-12 col-md-12 col-lg-12 d-flex justify-content-end">
-      <div class="row">
-        <div class="col-12 col-lg-12 destino">
+        <div class="destino">
           <a id="destino_quem_somos" href="#">Quem Somos Nós</a>
           <a id="destino_missao" href="#">Missão</a>
           <a id="destino_valores" href="#">Valores</a>
           <a id="destino_objetivo" href="#">Objetivo</a>
         </div>
-      </div>
-    </div>
+
         <div class="col-12 col-md-12 col-lg-12 d-flex justify-content-center margin-home">
           <div class="row">
           <div id="quem_somos" class="col-12 col-lg-11 texto mt-5">
@@ -51,3 +48,4 @@
       </div>
   </div>
 </div>
+<script src="js/destino.js"></script>

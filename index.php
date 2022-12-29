@@ -57,7 +57,6 @@ include("include/scripts.php");
 ?>
 
 <script src="js/menu_celular.js"></script>
-<script src="js/destino.js"></script>
 <script src="js/atualizacoes.js"></script>
 </body>
 </html>

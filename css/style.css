@@ -257,7 +257,14 @@ i.fas.fa-cart-plus {
 }
 
 .destino{
-    margin-top: -6em;
+    background: #e60088;
+    border-radius: 20px;
+    border: 2px solid #000;
+    padding: 10px 0 10px 20px;
+    position: fixed;
+    top: 23%;
+    left: 55%;
+    z-index: 99;
 }
 
 .destino a{
@@ -276,6 +283,12 @@ i.fas.fa-cart-plus {
     left: 1rem;
     top: 15rem;
     z-index: 99;
+}
+
+@media (max-width: 540px) {
+    .lateral {
+        top: 10rem;
+    }
 }
 .linklateral {
     color: #000;
