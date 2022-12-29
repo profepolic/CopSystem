@@ -360,15 +360,11 @@ input.invalido {
 
 .fundo-modal{
     background: linear-gradient(45deg, black, transparent);
-<<<<<<< HEAD
     color: white;
 }
 
-.dp{
+.dpi{
     float: left;
     margin-right: 4rem;
     margin-bottom: 1rem;
-=======
-    color: white !important;
->>>>>>> 8c5c66dbefb2e9231986593e0a85dbd49e6c4615
 }
