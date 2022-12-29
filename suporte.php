@@ -1,6 +1,10 @@
 <?php
 // session_destroy();
 $_SESSION['usuario'] = "z10";
+
+if(isset($_SESSION['usuario'])){
+ $usuarioNome = $_SESSION['usuario'];
+}
 ?>
 <style>
 .chat{
@@ -64,6 +68,9 @@ $query = $conn->query($select_suport);
 $fetch = $query->FETCH_ASSOC();
 extract($fetch);
 $cargo = "Conselheiro";
+
+$sql_get_adm = mysqli_query($conn, "SELECT * FROM suporte WHERE cliente = '{$usuarioNome}'");
+$count_get_adm = mysqli_num_rows($sql_get_adm);
 ?>
 
 
@@ -78,12 +85,16 @@ $cargo = "Conselheiro";
                             <h6>Faça login para poder utilizar o Suporte</h6>
                             <a href="login"><button class="btn btn-danger">Login</button></a>
                         </center>
-                    <?php }else if($status == 0){?>
+                    <?php }else{ if($count_get_adm <= 0){ ?>
                         <center>
                             <h6>Atualmente Estamos com (0) Atendentes On-line no momento</h6>
                             <a href="#"><button class="btn btn-info">Iniciar Chat</button></a>
                         </center>
-                   <?php }else if($status == 1){?>
+
+                   <?php
+                   } 
+                if($usuarioNome == $cliente){
+                   if($status == 0){?>
                     <div class="card-header">
                             <div class="col-md-6 mt-2 suporte-action">
                                 <a href="#" class="badge badge-pill badge-danger"> <i class="fas fa-door-closed"> Encerrar </i></a>
@@ -101,7 +112,7 @@ $cargo = "Conselheiro";
                         </div>
                         <div class="card-footer fot">
                         </div>
-                 <?php } else if($status == 2) { ?>
+                 <?php } else if($status == 1) { ?>
                         <div class="card-header">
                             <div class="col-md-6 mt-2 suporte-action">
                                 <a href="#" class="badge badge-pill badge-danger"> <i class="fas fa-door-closed"> Encerrar </i></a>
@@ -128,7 +139,7 @@ $cargo = "Conselheiro";
                               <textarea class="form-control chat" rows="5" placeholder="Digite sua mensagem aqui. . ."></textarea>
                             </div>
                         </div>
-                  <?php } ?>
+                  <?php } } } ?>
                 </div>
             </div>
         </div>
