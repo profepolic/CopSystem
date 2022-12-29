@@ -1,4 +1,7 @@
 $("#sino").on('click', ()=>{
+    if($("#modal")){
+        $("#modal").remove();
+    }
     var html = '<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">' + 
            '<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">' + 
                '<div class="modal-content">' +
@@ -29,10 +32,7 @@ $("#sino").on('click', ()=>{
     $("#modal").modal('show');
     $(".modal-content").addClass('fundo-modal');
     $("#fechar").on('click', ()=>{
-        Promise.all([$("#modal").modal('hide')]).then(function() {
-            $(".modal-backdrop").remove();
-            $("#modal").remove();
-          });
+        $("#modal").modal('hide');
     })
 })
 
@@ -40,6 +40,9 @@ $("#sino").on('click', ()=>{
 
 
 $("#user").on('click', ()=>{
+    if($("#modal")){
+        $("#modal").remove();
+    }
     var html = '<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">' + 
     '<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">' + 
                '<div class="modal-content">' +
@@ -68,10 +71,7 @@ $("#user").on('click', ()=>{
     $("#modal").modal('show');
     $(".modal-content").addClass('fundo-modal');
     $("#fechar").on('click', ()=>{
-        Promise.all([$("#modal").modal('hide')]).then(function() {
-            $(".modal-backdrop").remove();
-            $("#modal").remove();
-          });
+            $("#modal").modal('hide');
     })
 
     $("#botao_pesquisar").on('click', ()=>{
@@ -92,6 +92,9 @@ $("#user").on('click', ()=>{
 
 
 $("#config").on('click', ()=>{
+    if($("#modal")){
+        $("#modal").remove();
+    }
     var html = '<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">' + 
     '<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">' + 
                '<div class="modal-content">' +
@@ -120,10 +123,7 @@ $("#config").on('click', ()=>{
     $("#modal").modal('show');
     $(".modal-content").addClass('fundo-modal');
     $("#fechar").on('click', ()=>{
-        Promise.all([$("#modal").modal('hide')]).then(function() {
-            $(".modal-backdrop").remove();
-            $("#modal").remove();
-          });
+            $("#modal").modal('hide');
     })
 
     $("#botao_pesquisar").on('click', ()=>{
