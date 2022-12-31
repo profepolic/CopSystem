@@ -11,11 +11,9 @@
 
         include($_SERVER['DOCUMENT_ROOT'].'/system/global.php');
 
-        $nick_like = '%'. $nick .'%';
-
-        $query_buscar_user = 'SELECT nome, situacao FROM users WHERE nome LIKE :nome';
+        $query_buscar_user = 'SELECT nome, situacao FROM users WHERE nome = :nome';
         $buscar_user = $cons->prepare($query_buscar_user);
-        $buscar_user->bindParam(':nome', $nick_like, PDO::PARAM_STR);
+        $buscar_user->bindParam(':nome', $nick, PDO::PARAM_STR);
         $buscar_user->execute();
         
         if(!$buscar_user->rowCount()){
@@ -26,12 +24,13 @@
 <?php
         }else{
 
-            while($user = $buscar_user->fetch(PDO::FETCH_ASSOC)){
+            $user = $buscar_user->fetch(PDO::FETCH_ASSOC);
 ?>
 
-<div class="row col-4 col-lg-4 dpi">
-<div style="margin-right: 10px; height: 50px; width: 55px;  background: url(https://www.habbo.com.br/habbo-imaging/avatarimage?&user=<?php echo $user['nome'] ;?>&action=&direction=4&head_direction=3&img_format=png&gesture=&headonly=0&size=2),  radial-gradient(circle, #fff, #f1f1f1); background-position: center top -20px; border-radius: 60px; "></div>
-<div class="col-2 col-lg-2 mt-1">
+<div class="row col-12 col-lg-12 dpi d-flex justify-content-center">
+<div style="height: 50px; width: 55px;  background: url(https://www.habbo.com.br/habbo-imaging/avatarimage?&user=<?php echo $user['nome'] ;?>&action=&direction=4&head_direction=3&img_format=png&gesture=&headonly=0&size=2),  radial-gradient(circle, #fff, #f1f1f1); background-position: center top -20px; border-radius: 60px; "></div>
+</div>
+<div class="col-12 col-lg-12 mt-1 d-flex justify-content-center">
 <?php
 
 $select_situacao = "SELECT * FROM situacao WHERE id = {$user['situacao']}";
@@ -42,17 +41,20 @@ extract($fetch_situacao);
 
         if($user['situacao'] == 1 ){
             echo "
-            {$user['nome']} <br>
-            <span class='badge badge-pill badge-success'> ATIVO</span>";
+            {$user['nome']}
+            </div>
+            <div class='col-12 col-lg-12 mt-1 d-flex justify-content-center'>
+            <span class='badge badge-pill badge-success'> ATIVO</span></div>";
         }else if( $user['situacao'] == $id ){
             echo "
-            {$user['nome']} <br>
-            <span class='badge badge-danger' >$nome</span>";
+            {$user['nome']}
+            </div>
+            <div class='col-12 col-lg-12 mt-1 d-flex justify-content-center'>
+            <span class='badge badge-danger' >$nome</span></div>";
         }
     ?>
 </div>
-</div>
 
 <?php
-}}}
+}}
 ?>
