@@ -30,6 +30,7 @@ if(isset($_SESSION['usuario'])){
     background: #f1f1f1;
     border-radius: 1rem;
     padding: 14px;
+    padding-bottom: 0px;
     display: table;
     font-size: 15px;
     font-weight: bolder;
@@ -37,18 +38,19 @@ if(isset($_SESSION['usuario'])){
     margin-bottom: 10px;
     color: #000;
 }
-
 .balao-cliente {
     float: right;
     background: dodgerblue;
     color: #fff;
     border-radius: 1rem;
     padding: 14px;
+    padding-bottom: 0px;
     display: table;
     font-size: 15px;
     font-weight: bolder;
     margin-top: 10px;
     margin-bottom: 10px;
+    text-align: right;
 }
 .suporte-action {
     float: right;
@@ -58,6 +60,10 @@ if(isset($_SESSION['usuario'])){
     text-align: center;
     background: linear-gradient(45deg, black, transparent);
     padding: 10px;
+}
+
+.aps{
+    float: right;
 }
 </style>
 
@@ -78,7 +84,7 @@ $count_get_adm = mysqli_num_rows($sql_get_adm);
     <div class="row mt-5">
         <div class="col-md-12 col-12 mt-5">
             <div class="col-lg-12 mt-5 margin-home">
-                <div class="col-lg-8 chat">
+                <div class="col-lg-5 chat">
                     <?php
                     if(!isset($_SESSION['usuario'])) {?>
                         <center>
@@ -127,11 +133,13 @@ $count_get_adm = mysqli_num_rows($sql_get_adm);
                             </div>
                         </div>
                         <div class="card-body">
-                            <div class="col-md-3 balao-atentente">
+                            <div class="col-md-12 balao-atentente">
                                 <p>Teste visutal</p>
+                                <p class="small aps">03:00 <i class="fas fa-clock"></i></p>
                             </div>
-                            <div class="col-md-3 balao-cliente">
+                            <div class="col-md-12 balao-cliente">
                                 <p>Teste visutal2</p>
+                                <p class="small">03:00 <i class="fas fa-clock"></i></p>
                             </div>
                         </div>
                         <div class="card-footer fot">
