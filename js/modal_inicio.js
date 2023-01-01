@@ -118,13 +118,13 @@ $("#config").on('click', ()=>{
            '</div>';
     $(document.body).append(html);
     $.ajax({
-        url: 'include/pesquisa_user.php',
+        url: 'include/recuperar_senha.php',
         method: 'GET',
         cache: false,
         contentType: false,
         processData: false,
         success: function(resultado){
-            $("#titulo_modal").html('Pesquisar Militar');
+            $("#titulo_modal").html('Recuperar Senha');
             $("#body_modal").html(resultado);
             $("#modal").modal({backdrop:'static', keyboard:false});
     $("#modal").modal('show');
