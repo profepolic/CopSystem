@@ -2,7 +2,7 @@
 <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title><?php echo ucfirst($pagina);?></title>
-  <link rel="shortcut icon" href="#">
+  <link rel="shortcut icon" href="src/img/emblema.ico">
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
