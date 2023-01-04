@@ -1,3 +1,12 @@
+<?php
+    // Verifica o método de requisição HTTP e o local de execução do script PHP
+    if ( $_SERVER['REQUEST_METHOD']=='GET' && realpath(__FILE__) == realpath( $_SERVER['SCRIPT_FILENAME'] ) ) {
+       // Quando entrar nessa condição, significa que o usuário tentou acessar o link diretamente
+       header("LOCATION: index");
+        die();    
+    }
+?>
+
 <div class="container mt-5">
     <div class="row mt-5">
         <div class="col-md-12 col-12 mt-5">

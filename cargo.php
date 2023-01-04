@@ -1,6 +1,13 @@
 <?php
 $select_cargos = "SELECT * FROM cargos WHERE valor > 0";
 $select_cargos_query = $conn->query($select_cargos);
+
+    // Verifica o método de requisição HTTP e o local de execução do script PHP
+    if ( $_SERVER['REQUEST_METHOD']=='GET' && realpath(__FILE__) == realpath( $_SERVER['SCRIPT_FILENAME'] ) ) {
+       // Quando entrar nessa condição, significa que o usuário tentou acessar o link diretamente
+       header("LOCATION: index");
+        die();    
+    }
 ?>
 
 <div class="col-lg-12">

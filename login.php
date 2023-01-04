@@ -1,13 +1,12 @@
 <?php
-include("include/url_amigavel.php");
-
-$pagina = filter_input(INPUT_GET, 'pagina', FILTER_DEFAULT);
+    // Verifica o método de requisição HTTP e o local de execução do script PHP
+    if ( $_SERVER['REQUEST_METHOD']=='GET' && realpath(__FILE__) == realpath( $_SERVER['SCRIPT_FILENAME'] ) ) {
+       // Quando entrar nessa condição, significa que o usuário tentou acessar o link diretamente
+       header("LOCATION: index");
+        die();    
+    }
 ?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<?php /* <header> */ include("include/head.php"); /*<header-end> */ ?>
-<body class="body-principal">
-    <style>
+ <style>
 .bodyc {
     margin: auto;
     padding: 1rem;
@@ -51,26 +50,6 @@ $pagina = filter_input(INPUT_GET, 'pagina', FILTER_DEFAULT);
     font-family: auto;
 }
     </style>
-    <?php
-    /* <botaosuporte> */ include("include/botaosuporte.php"); /*<End - botaosuporte> */ 
-    ?>
-<div class="nav-conteiner px-5">
-    <nav>
-        <div>
-             <img src="src/images/home/sino.png" alt="Sem-conexion" class="img-home"> 
-        </div>
-        <div class="menu-btn">
-            <i id="menu_celular" class="fa fa-bars fa-2x"></i>
-        </div>
-        <ul>
-            <li>  <a href="index_home"><button class="button-home"><span class="btn-label"><i class="fas fa-home"></i></span>Inicio</button></a> </li>
-            <li>  <a href="index_cargo"><button class="button-support"><span class="btn-label"><i class="fas fa-cart-plus"></i></span>Shop</button></a> </li>
-        </ul>
-    </nav>
-</div>
-
-
-
 <div class="row">
 <img src="src/images/login/login.png" alt="">
     <div class="col-lg-5 bodyc">
@@ -112,7 +91,3 @@ $pagina = filter_input(INPUT_GET, 'pagina', FILTER_DEFAULT);
             </div>
     </div>
 </div>
-<?php /* <Footer> */ include("include/footer2.php"); /*<End - Footer> */ ?>
-
-</body>
-</html>
