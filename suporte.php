@@ -1,7 +1,5 @@
 <?php
 // session_destroy();
-$_SESSION['usuario'] = "z10";
-
 if(isset($_SESSION['usuario'])){
  $usuarioNome = $_SESSION['usuario'];
 }

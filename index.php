@@ -13,7 +13,12 @@ $pagina = filter_input(INPUT_GET, 'pagina', FILTER_DEFAULT);
 <body class="body-principal">
 
 <?php /* <header> */ include("include/nav_bar.php"); /*<header-end> */ ?>
-
+<?php
+		if(isset($_SESSION['msg'])){
+		echo $_SESSION['msg'];
+		unset($_SESSION['msg']);   
+    }
+?>  
 <div class="col-lg-1 lateral">
 <a id="user" class="linklateral" href="#"><i class="fas fa-user"></i></a>
 <a id="config" class="linklateral" href="#"><i class="fas fa-cog"></i></a>

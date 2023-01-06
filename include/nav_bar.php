@@ -13,7 +13,12 @@
             <li>  <a href="index_home"><button class="button-home"><span class="btn-label"><i class="fas fa-home"></i></span>Inicio</button></a> </li>
             <li>  <a href="index_registrar"><button class="button-activate"><span class="btn-label"><i class="fas fa-power-off"></i></span>Registrar</button></a> </li>
             <li>  <a href="index_cargo"><button class="button-support"><span class="btn-label"><i class="fas fa-cart-plus"></i></span>Shop</button></a> </li>
+            <?php if(isset($_SESSION['usuario'])){ ?>
+            <li>  <a href="kernel/sair"><button class="button-sign">Sair</button></a> </li>
+           <?php }else{ ?>
             <li>  <a href="index_login"><button class="button-sign">Entrar</button></a> </li>
+           <?php } ?>
+            
         </ul>
     </nav>
 </div>

@@ -381,3 +381,14 @@ input.invalido {
 ::-webkit-scrollbar-thumb {
     background: black;
 }
+
+.ds{
+    padding: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 18rem;
+    display: table;
+    border-radius: 7px;
+    position: relative;
+    z-index: 50000;
+}

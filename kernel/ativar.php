@@ -119,6 +119,10 @@ if(isset($nick) && isset($email) && isset($senha) && isset($confirmar_senha) && 
         $adicionar_usuario->bindValue(':situacao', 0, PDO::PARAM_STR);
     
         if($adicionar_usuario->execute()){
+            $select = "SELECT * FROM users WHERE nome ='$nick' ";
+            $query_teste = $conn->query($select);
+            $user = $query_teste->FETCH_ASSOC();
+            $sql2 = mysqli_query($conn, "UPDATE users SET unique_id = '{$user['id']}' WHERE id = {$user['id']}");
             $dados_json = ['status' => 'Usuário criado com sucesso!'];
         }
     

@@ -148,3 +148,7 @@ $("#config").on('click', ()=>{
         }
     })
 })
+
+setTimeout(function() {
+    $("#tostalertds").fadeOut().empty();
+}, 5000);
