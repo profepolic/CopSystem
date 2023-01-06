@@ -47,6 +47,7 @@ if($select_perm_query->num_rows > 0) {
         <div class="details">
           <span><?php echo $row['nome'] ?></span>
           <p><?php echo $row['status']; ?></p>
+          <a href="php/delet.php?user_id=<?php echo $user_id;?>"><button class="btn-atens">Encerrar</button></a>
         </div>
       </header>
       <div class="chat-box">
@@ -89,6 +90,7 @@ if($select_perm_query->num_rows > 0) {
         <div class="details">
           <span><?php echo $row['nome'] ?></span>
           <p><?php echo $row['status']; ?></p>
+          <a href="php/delet.php?user_id=<?php echo $user_id;?>"><button class="btn-atens">Encerrar</button></a>
         </div>
       </header>
       <div class="chat-box">
